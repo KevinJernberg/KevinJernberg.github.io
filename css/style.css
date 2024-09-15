@@ -185,8 +185,9 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 255), 65% , rgba(50, 148, 235, 0.6)), url(../../assets/png/KevinProfil.png);
   background-position: center;
+  background-size: cover;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
@@ -247,7 +248,7 @@ textarea {
     text-align: center; }
 
 .about {
-  background: #fafafa; }
+  background: #0a0a0a; }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -498,7 +499,6 @@ textarea {
   width: 100%;
   z-index: 1000;
   background: #000;
-  background: #fff;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1); }
   .header__content {
     display: flex;
@@ -512,7 +512,7 @@ textarea {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #333;
+    color: #BBB;
     transition: color .3s; }
     .header__logo-container:hover {
       color: #0062b9; }
@@ -548,7 +548,7 @@ textarea {
     padding: 2.2rem 3rem;
     display: inline-block;
     font-size: 1.6rem;
-    color: #333;
+    color: #BBB;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
