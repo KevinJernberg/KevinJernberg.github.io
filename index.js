@@ -36,3 +36,41 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+const galleryContainer = document.querySelector('.gallery-container')
+const galleryItems = document.querySelectorAll('.gallery-item')
+
+class Carousel {
+  constructor(container, items) {
+    this.carouselContainer = container;
+    this.carouselArray = [...items];
+  }
+  
+  updateGallery(){
+    
+    this.carouselArray.forEach(el => {
+      el.classList.remove('gallery-item-1')
+      el.classList.remove('gallery-item-2')
+      el.classList.remove('gallery-item-3')
+      el.classList.remove('gallery-item-4')
+      el.classList.remove('gallery-item-5')
+    });
+    
+    this.carouselArray.slice(0, 5).forEach((el, i) => {
+      el.classList.add(`gallery-item-${i+1}`);
+    });
+  }
+  
+  shiftGallery(){
+    console.log("Switch")
+    this.carouselArray.unshift(this.carouselArray.pop());
+    
+    this.updateGallery();
+  }
+}
+
+const carousel = new Carousel(galleryContainer, galleryItems);
+
+const interval = setInterval(function (){
+  carousel.shiftGallery();
+}, 5000);
