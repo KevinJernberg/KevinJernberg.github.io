@@ -180,6 +180,8 @@ textarea {
   .btn--bg {
     padding: 1.5rem 8rem;
     font-size: 2rem; }
+  .btn--mp {
+    background: #EFF}
   .btn--med {
     margin: 0px 1rem;
     padding: 1.5rem 5rem;
@@ -499,28 +501,48 @@ textarea {
   .project-cs-hero__info {
     margin: 3rem auto 0 auto;
     max-width: 80rem; }
-  .project-cs-hero__cta {
-    margin-top: 5rem;
-    text-align: center; }
+.project-cs-hero__info__mp {
+  margin: 5rem auto 0 auto;
+  max-width: 80rem; }
+.project-cs-hero__cta {
+  margin-top: 5rem;
+  text-align: center;}
+.project-cs-hero__cta__mp {
+  margin-top: 4rem;
+  text-align: center;}
+  .project-cs-hero-MP{
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(1, 1, 1, 0), 50% ,rgba(17, 34, 34, 1)), url(../../assets/png/MP-Scenery.png);
+    background-size: cover;
+    background-position: center;
+    position: relative; }
 
+
+.project-details{
+  background-color: #122;
+}
 .project-details__content {
   padding: 8rem 0;
   max-width: 90rem;
   margin: auto; }
   .project-details__content-title {
+    color: #EDD;
     font-weight: 700;
     font-size: 2.8rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 2rem;
+    margin-top: 3rem;}
     @media only screen and (max-width: 37.5em) {
       .project-details__content-title {
         font-size: 2.4rem; } }
 
 .project-details__showcase-img-cont {
   width: 100%;
+  height: 500px;
   margin-bottom: 6rem; }
 
 .project-details__showcase-img {
-  width: 100%; }
+  width: 100%; 
+  height: 100%;}
 
 .project-details__content-main {
   width: 100%;
@@ -571,9 +593,11 @@ textarea {
   position: fixed;
   width: 99%;
   z-index: 1000;
-  background: #233;
-  box-shadow: 0 10px 100px rgba(1, 1, 1, 1); 
-  border: 4px solid #233;
+  background: #344;
+  box-shadow: 0 10px 100px rgba(1, 1, 1, 1);
+  border: 0px solid #000;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
   border-radius: 20px;
   margin: fill;}
   .header__content {
@@ -747,7 +771,7 @@ textarea {
     background: rgba(153, 153, 153, 0.2);
     border-radius: 5px;
     font-weight: 600;
-    color: #777; }
+    color: #DCC; }
 
 .mouse {
   width: 25px;
