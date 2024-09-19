@@ -62,7 +62,6 @@ class Carousel {
   }
   
   shiftGallery(){
-    console.log("Switch")
     this.carouselArray.unshift(this.carouselArray.pop());
     
     this.updateGallery();
@@ -74,3 +73,16 @@ const carousel = new Carousel(galleryContainer, galleryItems);
 const interval = setInterval(function (){
   carousel.shiftGallery();
 }, 5000);
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+

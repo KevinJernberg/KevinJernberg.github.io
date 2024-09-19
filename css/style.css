@@ -85,10 +85,9 @@ textarea {
 
 .heading-sec__main {
   display: block;
-  color: #122;
+  color: #EDD;
   font-size: 4rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
   letter-spacing: 3px;
   text-align: center;
   margin-bottom: 3.5rem;
@@ -182,7 +181,7 @@ textarea {
     padding: 1.5rem 8rem;
     font-size: 2rem; }
   .btn--med {
-    margin: 0px 0px;
+    margin: 0px 1rem;
     padding: 1.5rem 5rem;
     font-size: 1.6rem; }
   .btn--theme {
@@ -194,6 +193,10 @@ textarea {
     border: 2px solid #0062b9;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
+  .btn--first {
+    margin: 0px 1rem 0px 0px;
+    padding: 1.5rem 5rem;
+    font-size: 1.6rem; }
 
 .sec-pad {
   padding: 12rem 0; }
@@ -306,10 +309,16 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 2rem; }
+        margin-bottom: 1rem; }
 
+
+.projects{
+  background: linear-gradient(to top, rgba(0, 98, 185, 0.8), 20%, rgba(17, 34, 34, 255)), url(../../assets/svg/common-bg.svg);
+}
 .projects__row {
   display: grid;
+  place-items: center;
+  align-content: center;
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 5rem;
   margin-bottom: 11rem; }
@@ -325,10 +334,22 @@ textarea {
     margin-bottom: 0; }
   .projects__row-img-cont {
     overflow: hidden; }
+  .projects__row-img-cont1 {
+    width: 50rem;
+    margin-left: 0!important}
   .projects__row-img {
     width: 100%;
     display: block;
     object-fit: cover; }
+  .projects__row-img1 {
+    width: inherit;
+    height: inherit;
+    display: block;
+    z-index: 3;
+    position: absolute;
+    object-fit: scale-down;
+    margin: -20rem;
+    transform: rotate(-15deg)}
   .projects__row-content {
     padding: 2rem 0;
     display: flex;
@@ -354,6 +375,25 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
+
+.mp-vid{
+  z-index: 2;
+  position: relative;
+  border: 4px solid #233;
+  border-radius: 10px;
+}
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+} 
 
 .contact {
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
@@ -571,7 +611,7 @@ textarea {
     object-position: center;
     display: block; }
   .header__logo-sub {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px; }
