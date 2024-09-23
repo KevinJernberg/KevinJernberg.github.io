@@ -120,27 +120,76 @@
                 <div class="skills__skill">Shaders</div>
               <p class="project-details__desc-para">
                 In Missing Picture you play as a private detective in 1980s western Sweden. Where you have been sent to
-                investigate the supernatural dissapperence of 3 teenagers. By using your polariod
+                investigate the supernatural dissapperence of 3 teenagers. By using your polaroid
                 camera, you snap photos of the evidence to be used later when figuring out what happend in this forest. 
                 Missing Picture was Nominated for Best Narrative in Sweden Game Awards 2024 and was nominated for Skövde
                 Academic Game Awards at Sweden Game Conference 2024.
               </p>
               <p class="project-details__desc-para">
                 This project would allow me to test myself as a Game Developer and as a Programmer. The teams ambitions were high,
-                so my skills in interdisciplinary communication, rapid digital prototyping and the Unity Game Engine was
-                put on full display.
+                and as 1 of the 3 programmers on this project. My skills in interdisciplinary communication,
+                rapid digital prototyping and the Unity Game Engine was put to the test.
               </p>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">My Contributions</h3>
               <p class="project-details__desc-para">
                 For this project i wanted my technical knowledge about computer rendering, 3D-Math and Unity to not
-                only benefit my work but also to befefit the final game as a whole. I also strove write more maintainable 
+                only benefit my work but also to benefit the final game as a whole. I also strove to write more maintainable 
                 and well structured code, as we predicted that a lot of testing needed to be done to get the 
-                Polariod Camera right.
+                Polaroid Camera right.
               </p>
 
-              <h3 class="project-details__content-title-small">Polariod Camera</h3>
+              <h3 class="project-details__content-title-small">Polaroid Camera</h3>
+
+              <video src="./assets/vid/Polariod-Camera.mp4" class="mp-vid" autoplay width="125%" muted loop>
+              </video>
+
+              <p class="project-details__desc-para">
+                I broke down the functions of the camera to:
+              </p>
+                <ol class="project-details__desc-para" type="1">
+                  <li>1. Input</li>
+                  <li>2. Take Photo</li>
+                  <li>3. Apply Photo / Output</li>
+                </ol>
+              <p class="project-details__desc-para">
+                The input was the thing we was most unsure about, in the start we just wanted the camera to just take a 
+                photo when the left mouse button was pressed. However, after player feedback said we wanted a more 
+                authentic camera feel. A redesign would need to be done.
+              </p>
+              <p class="project-details__desc-para">
+                The redesign included that you actually look into the camera, then snap a photo. As we had built the 
+                input based upon events and functions this was trivial to change, as we just swapped the animation and
+                only let the player photo when the camera was looked into.
+              </p>
+              <img
+                      src="./assets/png/Polariod-Input.png"
+                      alt="Software Screenshot"
+                      class="projects__row-img"
+                      loading="lazy"
+              />
+              <p class="project-details__desc-para">
+                From the outside, the Read Image part might be the most complicated. However, the Take Photo and output
+                part is the least convoluted. As we just render a frame from an invisible scene camera. Apply the render
+                to an image, then apply the image to a sprite. The Output (Sprite) can then be used in a material on the
+                polaroid photo game object.
+              </p>
+              <img
+                      src="./assets/png/Polariod-Output.png"
+                      alt="Software Screenshot"
+                      class="projects__row-img"
+                      loading="lazy"
+              />
+              <h3 class="project-details__content-title-small">Rendering</h3>
+              <p class="project-details__desc-para">
+                As we did not have a technical artist on the team, i took the initiative to create shaders and handle post processing.
+                By using Unity's Post Processing volumes and Shader Graphs i made pixel shaders that made the world feel
+                a little more alive.
+              </p>
+              <video src="./assets/vid/Shader-showcase.mp4" class="mp-vid" autoplay width="125%" muted loop>
+              </video>
+              
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>
@@ -159,6 +208,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <footer class="main-footer">
@@ -216,10 +266,7 @@
         </div>
 
         <div class="main-footer__lower">
-          &copy; Copyright 2021. Made by
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-            >Ram Maheshwari</a
-          >
+          &copy; Copyright 2024.
         </div>
       </div>
     </footer>
