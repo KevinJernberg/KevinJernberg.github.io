@@ -114,7 +114,7 @@
                 <div class="overview-box"><img class="svg-icons" src="assets/svg/engine.svg" alt="engine icon">Engine: Unity URP 2021</div>
               </div>
               <div class="skills">
-                <s class="skills__skill"> Unity</s>
+                <div class="skills__skill"> Unity</div>
                 <div class="skills__skill">C#</div>
                 <div class="skills__skill">Gameplay Programming</div>
                 <div class="skills__skill">Shaders</div>
@@ -126,8 +126,8 @@
                 Academic Game Awards at Sweden Game Conference 2024.
               </p>
               <p class="project-details__desc-para">
-                This project would allow me to test myself as a Game Developer and as a Programmer. The teams ambitions were high,
-                and as 1 of the 3 programmers on this project. My skills in interdisciplinary communication,
+                This project would allow me to test myself as a Game Developer and as a Programmer. The teams ambitions were.
+                And as 1 of the 3 programmers on this project, my skills in interdisciplinary communication,
                 rapid digital prototyping and the Unity Game Engine was put to the test.
               </p>
             </div>
@@ -135,61 +135,117 @@
               <h3 class="project-details__content-title">My Contributions</h3>
               <p class="project-details__desc-para">
                 For this project i wanted my technical knowledge about computer rendering, 3D-Math and Unity to not
-                only benefit my work but also to benefit the final game as a whole. I also strove to write more maintainable 
-                and well structured code, as we predicted that a lot of testing needed to be done to get the 
-                Polaroid Camera right.
+                only benefit my work but also to benefit the team and the final game as a whole. I also strove to write
+                more maintainable and well structured code, as we predicted that a lot of testing
+                needed to be done to get some gameplay elements right.
               </p>
 
-              <h3 class="project-details__content-title-small">Polaroid Camera</h3>
-
-              <video src="./assets/vid/Polariod-Camera.mp4" class="mp-vid" autoplay width="125%" muted loop>
+              <p class="project-details__desc-para" style="margin-bottom: -1rem; font-weight: 700">
+                <i>Click on the topic you wish to learn more about</i>
+              </p>
+              <button class="project-details__content-title-small">Polaroid Camera</button>
+              <div class="panel">
+                <video src="./assets/vid/Polariod-Camera.mp4" class="mp-vid" autoplay muted loop>
+                </video>
+  
+                <p class="project-details__desc-para">
+                  One of the gameplay elements that needed a lot of testing was the polaroid camera that the
+                  player uses to take photos in-game. <br/><br/>
+                  I broke down the functions of the camera to:
+                </p>
+                  <ol class="project-details__desc-para" type="1">
+                    <li>1. Input</li>
+                    <li>2. Take Photo</li>
+                    <li>3. Apply Photo / Output</li>
+                  </ol>
+                <p class="project-details__desc-para">
+                  The input was the thing we was most unsure about, in the start we just wanted the camera to just take a 
+                  photo when the left mouse button was pressed. However, after player feedback said they wanted a more 
+                  authentic camera feel. A redesign would need to be done.
+                </p>
+                <img
+                        src="./assets/png/Polariod-Input.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img"
+                        loading="lazy"
+                />
+                <p class="project-details__desc-para">
+                  The redesign included that you actually look into the camera, then snap a photo. As I had built the 
+                  input based upon events and functions this was trivial to change, as I just swapped the animation and
+                  only let the player photo when the camera was looked into.
+                </p>
+                <img
+                        src="./assets/png/Polariod-Output.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img"
+                        loading="lazy"
+                />
+                <p class="project-details__desc-para">
+                  From the outside, the Read Image part might be the most complicated. However, the Take Photo and output
+                  part is the least convoluted. As I just render a frame from an invisible scene camera. Apply the render
+                  to an image, then apply the image to a sprite. The Output (Sprite) can then be used in a material on the
+                  polaroid photo game object.
+                </p>
+              </div>
+              <button class="project-details__content-title-small">Rendering</button>
+              <div class="panel">
+              <p class="project-details__desc-para">
+                Due to our lack of a technical artist on our team, i took the initiative to learn more about how Unity's
+                Universal Render Pipeline handles rendering, shaders and post processing. It started with our need for
+                a more lived in world.
+              </p>
+              <video src="./assets/vid/Shader-showcase.mp4" class="mp-vid" autoplay muted loop>
               </video>
-
               <p class="project-details__desc-para">
-                I broke down the functions of the camera to:
-              </p>
-                <ol class="project-details__desc-para" type="1">
-                  <li>1. Input</li>
-                  <li>2. Take Photo</li>
-                  <li>3. Apply Photo / Output</li>
-                </ol>
-              <p class="project-details__desc-para">
-                The input was the thing we was most unsure about, in the start we just wanted the camera to just take a 
-                photo when the left mouse button was pressed. However, after player feedback said we wanted a more 
-                authentic camera feel. A redesign would need to be done.
-              </p>
-              <p class="project-details__desc-para">
-                The redesign included that you actually look into the camera, then snap a photo. As we had built the 
-                input based upon events and functions this was trivial to change, as we just swapped the animation and
-                only let the player photo when the camera was looked into.
+                The primary shader on display is the wind shader that the trees use, a variation of this shader is also used
+                on various types of foliage. As this would be my first shader, it would not be extremely pretty. But it 
+                served its purpose well, this made the world feel less static and more of a real but quiet place.
               </p>
               <img
-                      src="./assets/png/Polariod-Input.png"
+                      src="./assets/png/Shader-graph.png"
                       alt="Software Screenshot"
                       class="projects__row-img"
                       loading="lazy"
               />
               <p class="project-details__desc-para">
-                From the outside, the Read Image part might be the most complicated. However, the Take Photo and output
-                part is the least convoluted. As we just render a frame from an invisible scene camera. Apply the render
-                to an image, then apply the image to a sprite. The Output (Sprite) can then be used in a material on the
-                polaroid photo game object.
+                My primary focus was not to make the shader look nice or be the most effective. But to help the artists 
+                get their vision across to the player. So i focused on having parameters for the artists to play and 
+                experiment with.
               </p>
               <img
-                      src="./assets/png/Polariod-Output.png"
+                      src="./assets/png/Shaders-Timeline.png"
                       alt="Software Screenshot"
                       class="projects__row-img"
                       loading="lazy"
               />
-              <h3 class="project-details__content-title-small">Rendering</h3>
               <p class="project-details__desc-para">
-                As we did not have a technical artist on the team, i took the initiative to create shaders and handle post processing.
-                By using Unity's Post Processing volumes and Shader Graphs i made pixel shaders that made the world feel
-                a little more alive.
+                During development we realized that performance was to be an issue eventually. Our vision would
+                eventually outgrow our engines capability to keep the game running smoothly. I volunteered to optimize
+                the rendering (which was our performance culprit). Using primarily the profiler and techniques 
+                such as GPU Batching, shadow cascades and culling to prevent performance drops.
               </p>
-              <video src="./assets/vid/Shader-showcase.mp4" class="mp-vid" autoplay width="125%" muted loop>
-              </video>
               
+              <p class="project-details__desc-para">
+                After i deemed my work good enough we were always at all times above the target framerate of 60FPS.
+                While the game has some performance problems on mid to low level machines. We have not experienced any 
+                performance problems while showing our game at award shows and conferences.
+              </p>
+              </div>
+              <button class="project-details__content-title-small">Conclusion and Reflection</button>
+              <div class="panel">
+
+                <p class="project-details__desc-para">
+                  I strove to push myself in this project, both as a programmer and as part of a team. This project 
+                  tested me in way that i believe only a game project you have passion for can. However there was some
+                  things i wished i could do better.
+                </p>
+                
+                
+
+                <p class="project-details__desc-para">
+                  
+                </p>
+              </div>
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>

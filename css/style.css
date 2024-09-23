@@ -381,8 +381,11 @@ textarea {
 .mp-vid{
   z-index: 2;
   position: relative;
+  align-self: baseline;
   border: 4px solid #233;
   border-radius: 10px;
+  width: 100%;
+  margin-top: 3rem;
 }
 .hidden{
   opacity: 0;
@@ -541,12 +544,32 @@ textarea {
       .project-details__content-title {
         font-size: 2.4rem; } }
 
+.panel {
+  display: none;
+
+  transition: max-height 0.2s ease-out;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .project-details__content-title-small:hover {
+  background-color: #000;
+}
+
 .project-details__content-title-small {
-  color: #EDD;
+  alignment-baseline: center;
   font-weight: 600;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;}
+  margin-top: 2rem;
+  background-color: #233;
+  color: #EDD;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 10px;}
 
 .project-details__showcase-img-cont {
   width: 100%;

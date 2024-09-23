@@ -87,7 +87,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("project-details__content-title-small");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -95,7 +95,7 @@ for (i = 0; i < acc.length; i++) {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle("active");
-
+    
     /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
