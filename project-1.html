@@ -110,7 +110,7 @@
                 <h3 class="project-details__content-first-title">Project Overview</h3>
                 <div class="overview-box"><img class="svg-icons" src="assets/svg/role.svg" alt="role icon">Role: Gameplay Programmer</div>
                 <div class="overview-box"><img class="svg-icons" src="assets/svg/team-size.svg" alt="team size icon">Team Size: 11</div>
-                <div class="overview-box"><img class="svg-icons" src="assets/svg/time-frame.svg" alt="time frame icon">Time Frame: 8 weeks</div>
+                <div class="overview-box"><img class="svg-icons" src="assets/svg/time-frame.svg" alt="time frame icon">Time Frame: 8 weeks (100%)</div>
                 <div class="overview-box"><img class="svg-icons" src="assets/svg/engine.svg" alt="engine icon">Engine: Unity URP 2021</div>
               </div>
               <div class="skills">
@@ -126,9 +126,9 @@
                 Academic Game Awards at Sweden Game Conference 2024.
               </p>
               <p class="project-details__desc-para">
-                This project would allow me to test myself as a Game Developer and as a Programmer. The teams ambitions were.
-                And as 1 of the 3 programmers on this project, my skills in interdisciplinary communication,
-                rapid digital prototyping and the Unity Game Engine was put to the test.
+                This project tested several parts of my knowledge as a Game Developer and as a Programmer. The teams
+                ambitions were high. And as 1 of the 3 programmers on this project, my skills in
+                interdisciplinary communication, rapid digital prototyping and the Unity Game Engine was put on display.
               </p>
             </div>
             <div class="project-details__tools-used">
@@ -182,7 +182,7 @@
                 />
                 <p class="project-details__desc-para">
                   From the outside, the Read Image part might be the most complicated. However, the Take Photo and output
-                  part is the least convoluted. As I just render a frame from an invisible scene camera. Apply the render
+                  part is the least convoluted. As I just render and save a frame from an invisible camera in the scene. Apply the render
                   to an image, then apply the image to a sprite. The Output (Sprite) can then be used in a material on the
                   polaroid photo game object.
                 </p>
@@ -192,7 +192,7 @@
               <p class="project-details__desc-para">
                 Due to our lack of a technical artist on our team, i took the initiative to learn more about how Unity's
                 Universal Render Pipeline handles rendering, shaders and post processing. It started with our need for
-                a more lived in world.
+                a more lively and less static world.
               </p>
               <video src="./assets/vid/Shader-showcase.mp4" class="mp-vid" autoplay muted loop>
               </video>
@@ -226,7 +226,7 @@
               </p>
               
               <p class="project-details__desc-para">
-                After i deemed my work good enough we were always at all times above the target framerate of 60FPS.
+                After i deemed my work good enough we were always above the target framerate of 60FPS.
                 While the game has some performance problems on mid to low level machines. We have not experienced any 
                 performance problems while showing our game at award shows and conferences.
               </p>
@@ -237,13 +237,59 @@
                 <p class="project-details__desc-para">
                   I strove to push myself in this project, both as a programmer and as part of a team. This project 
                   tested me in way that i believe only a game project you have passion for can. However there was some
-                  things i wished i could do better.
+                  things i wished i had more time for or improve.
                 </p>
-                
-                
 
+                <img
+                        src="./assets/png/Conclusion-CameraPerformance.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img"
+                        loading="lazy"
+                />
                 <p class="project-details__desc-para">
-                  
+                  When the Polaroid camera takes a photo, the game needs to render 2 frames. One for the normal game,
+                  and one for the photo the player has taken. This makes a lag spike that doubles the 
+                  CPU usage, halving the amount of FPS in the game for that time. The gameplay kind of cleverly covers
+                  this using the camera flash animation, but this can still be an issue on weaker machines. 
+                </p>
+                <p class="project-details__desc-para">
+                  Why we can't use the first frame is that we don't want the game UI on the photo. I did put some
+                  research into using stencil buffers to render the UI and not using it in the taken photo.
+                </p>
+                <img
+                        src="./assets/png/Conclusion-WholeMap.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img"
+                        loading="lazy"
+                />
+                <p class="project-details__desc-para">
+                  Me & another programmer did look into using occlusion culling and a more detailed frustum culling. 
+                  The time was working against us by this point and we decided to prioritize other parts of the game
+                  such as game-feel & bug fixing. As we felt that bugs took away more from the experience. I do however
+                  wish to come back and continue optimizing as much as i can.
+                </p>
+                <img
+                        src="./assets/png/Conclusion-ReadableCode1.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img "
+                        style="margin-bottom: 1rem"
+                        loading="lazy"
+                />
+                <img
+                        src="./assets/png/Conclusion-ReadableCode2.png"
+                        alt="Software Screenshot"
+                        class="projects__row-img"
+                        loading="lazy"
+                />
+                <p class="project-details__desc-para">
+                  I mentioned that i strove for more readable and well structured code. A standard we implemented was
+                  Summary's for both classes and functions. This made following the code and fixing bugs a lot smoother.
+                  While writing the summary you also needed to have a clear thought behind the naming and
+                  the purpose of the code.
+                </p>
+                <p class="project-details__desc-para" style="margin-top: 3rem">
+                  I am really proud of the work i did on this project. Some things could be improved, tweaked or reworked.
+                  But as a whole think this project really did challenge me to become a better game programmer.
                 </p>
               </div>
             </div>

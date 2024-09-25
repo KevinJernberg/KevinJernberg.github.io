@@ -335,14 +335,17 @@ textarea {
   .projects__row:last-child {
     margin-bottom: 0; }
   .projects__row-img-cont {
-    overflow: hidden; }
+    overflow: hidden; 
+  }
   .projects__row-img-cont1 {
     width: 50rem;
     margin-left: 0!important}
   .projects__row-img {
     width: 100%;
     display: block;
-    object-fit: cover; }
+    object-fit: cover; 
+    border-radius: 5px;
+  }
   .projects__row-img1 {
     width: inherit;
     height: inherit;
@@ -377,6 +380,12 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
+
+.project-title{
+  font-size: 4rem;
+  font-weight: 800;
+  color: #EDD;
+}
 
 .mp-vid{
   z-index: 2;
