@@ -315,7 +315,7 @@ textarea {
 
 
 .projects{
-  background: linear-gradient(to top, rgba(0, 98, 185, 0.8), 20%, rgba(17, 34, 34, 255)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), 5%, rgba(17, 34, 34, 255)), url(../../assets/svg/common-bg.svg);
 }
 .projects__row {
   display: grid;
@@ -528,6 +528,12 @@ textarea {
     background-size: cover;
     background-position: center;
     position: relative; }
+.project-cs-hero-Gaze{
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(1, 1, 1, 0), 10% ,rgba(17, 34, 34, 1)), url(../../assets/png/Gaze-Scenery.png);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
 
 
 .project-details{
@@ -587,7 +593,9 @@ textarea {
 
 .project-details__showcase-img {
   width: 100%; 
-  height: 100%;}
+  height: 100%;
+  border: 0px;
+  border-radius: 10px}
 
 .project-details__content-main {
   width: 100%;
